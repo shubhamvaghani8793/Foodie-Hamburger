@@ -7,10 +7,16 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,regular,500,600,700,800" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Foodi Hamburger</title>
 </head>
 
-<body>
+<body onload="myfun()">
+    <div class="fixed flex justify-center items-center h-full w-full bg-black loading">
+        <div class="animate-spin border-t-4 w-28 ml-8 h-28 border-white rounded-full  z-1">
+        </div>
+    </div>
+
     <div class="main-content">
         <header>
             <div class="nav-container">
@@ -83,5 +89,12 @@
         </main>
     </div>
 </body>
+<script>
+    var preloader = document.querySelector('.loading');
 
+    function myfun(){
+        preloader.style.display = 'none';
+    }
+
+</script>
 </html>
